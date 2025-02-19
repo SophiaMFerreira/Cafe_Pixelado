@@ -1,0 +1,34 @@
+article{
+    background-color: rgb(255, 187, 0);
+}
+
+.sectionCardapio{
+    background-color: rgb(243, 150, 255);
+    padding: 30px;
+}
+
+.caixa-item {
+    background-color: rgb(83, 224, 83);
+    /*Neumorphism.io*/
+    margin: 10px 200px ;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+img {
+    width: 150px;
+    height: 200px;
+    margin: 20px;
+    /*arredondadar*/
+}
+
+.descricao-item {
+    margin: 20px;
+}
+
+.infoPrecoML{
+    display: inline;
+    margin: 10px 10px;
+}
+

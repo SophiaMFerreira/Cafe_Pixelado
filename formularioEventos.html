@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="café pixelado, café geek, pixel art café, cultura geek, café retrô, pixel café, jogos retrô e café, cultura pop e café, 
+                                    site fofo de café, café e tecnologia, café para gamers, geek coffee, jogos retrô, café e animes, cultura nerd, café fofinho, 
+                                    café vintage, receitas geek, cafeteria online, bebidas temáticas">
+    <meta name="author" content="Nadine Vasconcellos Carvalho de Almeida e Sophia Agnes de Machado Ferreira">
+    <title>Café Pixelado</title>
+    
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/formulario.css">
+</head>
+<body>
+    <article>
+        <h2>Formulário para Proposição de Evento</h2>
+        <form action="" method="post">
+            <fieldset id="fieldContratante">
+                <legend>Informações do Solicitante</legend>
+                    <label for="nome">Nome do solicitante</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <p class="letrinhasMiudas">Em caso de pessoa física, inserir o nome completo.</p>
+                    <label for="email">E-mail para contato</label>
+                        <input type="email" id="email" name="email" required>
+                    <label for="telefone">Telefone para contato</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 0000-0000">
+                    <p>Redes sociais</p>
+                        <label for="instagram">Instagram</label>
+                            <input type="text" id="instagram" name="instagram">
+                        <label for="twiter">Twiter</label>
+                            <input type="text" id="twiter" name="twiter">
+                        <label for="outro">Outro</label>
+                            <input type="text" id="outro" name="outro">
+            </fieldset>
+            <fieldset id="fieldEvento">
+                <legend>Informações do Evento</legend>
+                    <section id="temaEvento">
+                        <h3>Sobre o Evento</h3>
+                        <label for="tipoEvento">Tipo de evento</label>
+                            <input list="tiposEventos" id="tipoEvento" name="tipoEvento" required>
+                        <datalist id="tiposEventos">
+                            <option value="Concurso ou Competição"></option>
+                            <option value="Debate ou mesa redonda"></option>
+                            <option value="Divulgação"></option>
+                            <option value="Game Night"></option>
+                            <option value="Quiz Geek"></option>
+                            <option value="RPG"></option>
+                            <option value="Workshop"></option>
+                        </datalist>
+                        <label for="tema">Tema do evento</label>
+                            <input type="text" id="tema" name="tema">
+                        <label for="descricao">Descrição breve do evento</label>
+                            <textarea name="descricao" id="descricao" cols="50" rows="10"></textarea>
+                        <p>Deseja incluir cardápio temático ?</p>
+                            <input type="radio" id="naoCardapio" name="cardapioTematico" value="Não" checked><label for="naoCardapio">Não</label>
+                            <input type="radio" id="simCardapio" name="cardapioTematico" value="Sim"><label for="simCardapio">Sim</label>
+                    </section>
+                    <section id="organizacaoEvento">
+                        <h3>Sobre a Organização</h3>
+                        <label for="publicoAlvo">Público-alvo</label>
+                            <input type="text" id="publicoAlvo" name="publicoAlvo">
+                        <label for="numParticipantes">Número estimado de participantes:</label>
+                            <input type="number" id="numParticipantes" name="numParticipantes" min="0" required>
+                        <label for="datas">Disponibilidade de Datas:</label>
+                            <textarea name="datas" id="datas" cols="50" rows="10"></textarea>
+                    </section>
+                    <section id="parceriaEvento">
+                        <h3>Parcerias e Apoio</h3>
+                        <p>Precisa de apoio da equipe do café ?</p>
+                            <input type="radio" id="simApoioCafe" name="apoioCafe" value="Sim"><label for="simApoioCafe">Sim</label>
+                            <input type="radio" id="naoApoioCafe" name="apoioCafe" value="Não" checked><label for="naoApoioCafe">Não</label>
+                        <p>Pretende trazer convidados/especialista ?</p>
+                            <label for="naoConvidados">Não</label><input type="radio" id="naoConvidados" name="convidados" value="Não" checked>
+                            <label for="simConvidados">Sim</label><input type="radio" id="simConvidados" name="convidados" value="Sim">
+                            <input type="checkbox" id="convidadoEspecial" name="convidadoEspecial">
+                            <label for="convidadoEspecial">O convidado possui restrições.</label>
+                            <p class="letrinhasMiudas">Se sim, será tratado na confirmação do evento.</p>
+                        <p>O evento contempla premiação ou brinde ?</p>
+                            <label for="naoPremiacao">Não</label><input type="radio" id="naoPremiacao" name="premiacao" value="Não" checked>
+                            <label for="simPremiacao">Sim</label><input type="radio" id="simPremiacao" name="premiacao" value="Sim">
+                            <input type="checkbox" id="premioCafe" name="premioCafe">
+                            <label for="premioCafe">Premiação ou brinde relativo ao café</label>
+                            <p class="letrinhasMiudas">Se sim, será tratado na confirmação do evento, sujeito a condições.</p>
+                    </section>
+            </fieldset>
+            <fieldset id="fieldTermosCondicoes">
+                <legend>Termos e Condições</legend>
+                <p>Ao participar de qualquer evento ou atividade promovida pelo Café Pixelado, você concorda com os seguintes termos e condições:</p>
+                <h4>1. Inscrição e Participação</h4>
+                    <ol>
+                        <li>Alguns eventos podem exigir inscrição prévia devido à limitação de vagas. A inscrição deve ser feita pelo site, formulário ou presencialmente no café.</li>
+                        <li>A participação é aberta a todas as idades, salvo eventos com restrições específicas (ex: competições de videogame para maiores de 18 anos).</li>
+                        <li>O não comparecimento sem aviso prévio poderá resultar em restrições para futuras inscrições.</li>
+                    </ol>
+                <h4>2. Comportamento e Regras Gerais</h4>
+                    <ol>
+                        <li>Respeito é essencial! Qualquer comportamento ofensivo, discriminatório ou agressivo resultará na remoção do evento.</li>
+                        <li>O uso de trajes ou cosplay deve seguir as diretrizes de respeito e bom senso, evitando vestimentas inapropriadas.</li>
+                        <li>Não será permitido o consumo de bebidas alcoólicas por menores de idade, conforme a legislação vigente.</li>
+                        <li>O café não se responsabiliza por objetos pessoais deixados no local durante o evento.</li>
+                    </ol>
+                <h4>3. Direitos de Imagem e Divulgação</h4>
+                    <ol>
+                        <li>Ao participar dos eventos, você autoriza o uso de sua imagem em fotos e vídeos para fins de divulgação nas redes sociais e materiais promocionais do café.</li>
+                        <li>Caso não queira sua imagem divulgada, informe nossa equipe antes do início do evento.</li>
+                    </ol>
+                <h4>4. Cancelamento e Alterações</h4>
+                    <ol>
+                        <li>O café se reserva o direito de cancelar ou modificar a programação dos eventos por motivos de força maior, como baixa adesão, problemas técnicos ou imprevistos.</li>
+                        <li></li>Em caso de cancelamento, os participantes serão avisados com antecedência sempre que possível.</li>
+                    </ol>
+                <h4>5. Responsabilidades</h4>
+                    <ol>
+                        <li>O café não se responsabiliza por acidentes ocorridos devido à negligência do participante.</li>
+                        <li>Em eventos com competições ou sorteios, as decisões dos organizadores serão finais e inapeláveis.</li>
+                    </ol>
+                <input type="checkbox" id="termosCondicoes" name="termosCondicoes" required>
+                <label for="termosCondicoes">Concordo que li e aceito os termos e condições acima.</label>
+            </fieldset>
+            <button type="reset">Limpar Dados</button>
+            <button type="submit">Enviar Solicitação</button>
+            <!--Agradecemos sua participação e esperamos que aproveite nossos eventos! 💙-->
+        </form>
+    </article>
+    <footer>
+
+    </footer>
+</body>
+</html>
