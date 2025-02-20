@@ -49,7 +49,7 @@ nav ul li a:hover {
 }
 
 .hero {
-    background-image: url('/Images/starWarsCupsofc.jpg');
+    background-image: url('../Images/starWarsCupsofc.jpg');
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -118,7 +118,7 @@ nav ul li a:hover {
 }
 
 .eventos-section {
-    background-image: url('/Images/cafeLounge3.jpg');
+    background-image: url('../Images/cafeLounge3.jpg');
     background-size: cover;
     width: 1700px;
     height: 600px;
@@ -229,7 +229,7 @@ nav ul li a:hover {
 }
 
 .contato-section {
-    background-image: url('/Images/contatoFundo.jpg');
+    background-image: url('../Images/contatoFundo.jpg');
     background-size: cover;
     color: rgb(88, 53, 37);
     font-family: 'Montserrat';
@@ -241,7 +241,7 @@ nav ul li a:hover {
 
 footer {
 
-    background-image: url('/Images/gramaFooter.jpg');
+    background-image: url('../Images/gramaFooter.jpg');
     background-size: cover;
     font-family: 'Press Start 2P';
     font-size: 9px;
