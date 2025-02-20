@@ -9,81 +9,136 @@
     <meta name="author" content="Nadine Vasconcellos Carvalho de Almeida e Sophia Agnes de Machado Ferreira">
     <title>Café Pixelado</title>
     
-    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="https//fonts.googleapis.com/css?family=Press Start 2P">
+    <link rel="stylesheet" href="https//fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/formulario.css">
     <script src="JavaScript/formularios.js"></script>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <a href="index.html"> 
+                <img src="Images/logoPNGCafePixelado2.png" alt="Café Pixelado">
+            </a>
+            <h1>Café Pixelado</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="sobrenos.html">SOBRE NÓS</a></li>
+                <li><a href="cardapio.html">CARDÁPIO</a></li>
+                <li><a href="#eventos">EVENTOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
     <article>
-        <h2>Formulário para Proposição de Evento</h2>
         <form action="index.html" method="post" onsubmit="enviarFormulario('eventos')">
+            <h2>Formulário para Proposição de Evento</h2>
             <input type="hidden" value="">
             <fieldset id="fieldContratante">
                 <legend>Informações do Solicitante</legend>
-                    <label for="nome" id="labelNome">Nome do solicitante</label>
+                    <div class="divlabelInput">
+                        <label for="nome" id="labelNome">Nome do solicitante</label>
                         <input type="text" id="nome" name="nome" required>
                         <p class="letrinhasMiudas">Em caso de pessoa física, inserir o nome completo.</p>
-                    <label for="email" id="labelEmail">E-mail para contato</label>
+                    </div>
+                    <div class="divlabelInput">
+                        <label for="email" id="labelEmail">E-mail para contato</label>
                         <input type="email" id="email" name="email"required >
-                    <label for="telefone" id="labelTelefone">Telefone para contato</label>
+                    </div>
+                    <div class="divlabelInput">
+                        <label for="telefone" id="labelTelefone">Telefone para contato</label>
                         <input type="tel" id="telefone" name="telefone" placeholder="(00) 0000-0000">
-                    <p>Redes sociais</p>
-                        <label for="instagram" id="labelInstagram">Instagram</label>
+                    </div>
+                    <div class="campoJuntinho">
+                        <p class="label">Redes sociais</p>
+                        <data class="campoJuntinho">
+                            <label for="instagram" id="labelInstagram">Instagram</label>
                             <input type="text" id="instagram" name="instagram" >
-                        <label for="twiter" id="labelTwiter">Twiter</label>
+                        </data>
+                        <div class="campoJuntinho">
+                            <label for="twiter" id="labelTwiter">Twiter</label>
                             <input type="text" id="twiter" name="twiter">
-                        <label for="outro">Outro</label>
+                        </div>
+                        <div class="campoJuntinho">
+                            <label for="outro">Outro</label>
                             <input type="text" id="outro" name="outro">
+                        </div>                        
+                    </div>
             </fieldset>
             <fieldset id="fieldEvento">
                 <legend>Informações do Evento</legend>
                     <section id="temaEvento">
                         <h3>Sobre o Evento</h3>
-                        <label for="tipoEvento" id="labelTiposEvento">Tipo de evento</label>
+                        <div class="divlabelInput">
+                            <label for="tipoEvento" id="labelTiposEvento">Tipo de evento</label>
                             <input list="tiposEventos" id="tipoEvento" name="tipoEvento" required>
-                        <datalist id="tiposEventos">
-                            <option value="Concurso ou Competição"></option>
-                            <option value="Debate ou mesa redonda"></option>
-                            <option value="Divulgação"></option>
-                            <option value="Game Night"></option>
-                            <option value="Quiz Geek"></option>
-                            <option value="RPG"></option>
-                            <option value="Workshop"></option>
-                        </datalist>
-                        <label for="tema">Tema do evento</label>
+                        </div>
+                        <div class="divlabelInput">
+                            <datalist id="tiposEventos">
+                                <option value="Concurso ou Competição"></option>
+                                <option value="Debate ou mesa redonda"></option>
+                                <option value="Divulgação"></option>
+                                <option value="Game Night"></option>
+                                <option value="Quiz Geek"></option>
+                                <option value="RPG"></option>
+                                <option value="Workshop"></option>
+                            </datalist>
+                        </div>
+                        <div class="divlabelInput">
+                            <label for="tema">Tema do evento</label>
                             <input type="text" id="tema" name="tema">
-                        <label for="descricao" id="labelDescricaoEvento">Descrição breve do evento</label>
-                            <textarea name="descricao" id="descricao" cols="50" rows="10"></textarea>
-                        <p>Deseja incluir cardápio temático ?</p>
+                        </div>
+                        <div class="divlabelInput">
+                            <label for="descricao" id="labelDescricaoEvento">Descrição breve do evento</label>
+                            <textarea name="descricao" id="descricao" cols="100" rows="5"></textarea>
+                        </div>
+                        <div class="divlabelInput">
+                            <p class="label">Deseja incluir cardápio temático ?</p>
                             <input type="radio" id="naoCardapio" name="cardapioTematico" value="Não" checked><label for="naoCardapio">Não</label>
                             <input type="radio" id="simCardapio" name="cardapioTematico" value="Sim"><label for="simCardapio">Sim</label>
+                        </div>
                     </section>
                     <section id="organizacaoEvento">
                         <h3>Sobre a Organização</h3>
-                        <label for="publicoAlvo">Público-alvo</label>
+                        <div class="divlabelInput">
+                            <label for="publicoAlvo">Público-alvo</label>
                             <input type="text" id="publicoAlvo" name="publicoAlvo">
-                        <label for="numParticipantes" id="labelNumParticipantes">Número estimado de participantes:</label>
+                        </div>
+                        <div class="divlabelInput">
+                            <label for="numParticipantes" id="labelNumParticipantes">Número estimado de participantes</label>
                             <input type="number" id="numParticipantes" name="numParticipantes" min="0" required>
-                        <label for="datas" id="labelDatas">Disponibilidade de Datas:</label>
-                            <textarea name="datas" id="datas" cols="50" rows="10"></textarea>
+                        </div>
+                        <div class="divlabelInput">
+                            <label for="datas" id="labelDatas">Disponibilidade de Datas</label>
+                            <textarea name="datas" id="datas" cols="100" rows="5"></textarea>
+                        </div>                       
                     </section>
                     <section id="parceriaEvento">
                         <h3>Parcerias e Apoio</h3>
-                        <p>Precisa de apoio da equipe do café ?</p>
+                        <div class="divlabelInput">
+                            <p class="label">Precisa de apoio da equipe do café ?</p>
                             <input type="radio" id="simApoioCafe" name="apoioCafe" value="Sim"><label for="simApoioCafe">Sim</label>
                             <input type="radio" id="naoApoioCafe" name="apoioCafe" value="Não" checked><label for="naoApoioCafe">Não</label>
-                        <p>Pretende trazer convidados/especialista ?</p>
-                            <input type="radio" id="naoConvidados" name="convidados" value="Não" checked  onclick="botoesCondicionais(this)"><label for="naoConvidados">Não</label>
-                            <input type="radio" id="simConvidados" name="convidados" value="Sim"  onclick="botoesCondicionais(this)"><label for="simConvidados" >Sim</label>
-                            <input type="checkbox" id="convidadoEspecial" name="convidadoEspecial" disabled>
+                        </div>
+                        <div class="divlabelInput">
+                            <p class="label">Pretende trazer convidados/especialista ?</p>
+                            <input type="radio" id="naoConvidados" name="convidados" value="Não" checked  onclick="botoesCondicionais(this)"><label for="naoConvidados" class="botoesRadio">Não</label>
+                            <input type="radio" id="simConvidados" name="convidados" value="Sim"  onclick="botoesCondicionais(this)"><label for="simConvidados" class="botoesRadio">Sim</label>
+                            <input type="checkbox" id="convidadoEspecial" name="convidadoEspecial" disabled class="botoesRadio">
                             <label for="convidadoEspecial" id="labelConvidadoEspecial">O convidado possui restrições.</label>
                             <p class="letrinhasMiudas">Se sim, será tratado na confirmação do evento.</p>
-                        <p>O evento contempla premiação ou brinde ?</p>
-                            <input type="radio" id="naoPremiacao" name="premiacao" value="Não" checked onclick="botoesCondicionais(this)"><label for="naoPremiacao">Não</label>
-                            <input type="radio" id="simPremiacao" name="premiacao" value="Sim" onclick="botoesCondicionais(this)"><label for="simPremiacao">Sim</label>
-                            <input type="checkbox" id="premioCafe" name="premioCafe" disabled>
+                        </div>
+                        <div class="divlabelInput">
+                            <p class="label">O evento contempla premiação ou brinde ?</p>
+                            <input type="radio" id="naoPremiacao" name="premiacao" value="Não" checked onclick="botoesCondicionais(this)"><label for="naoPremiacao" class="botoesRadio">Não</label>
+                            <input type="radio" id="simPremiacao" name="premiacao" value="Sim" onclick="botoesCondicionais(this)"><label for="simPremiacao" class="botoesRadio">Sim</label>
+                            <input type="checkbox" id="premioCafe" name="premioCafe" disabled class="botoesRadio">
                             <label for="premioCafe" id="labelPremioCafe">Premiação ou brinde relativo ao café</label>
                             <p class="letrinhasMiudas">Se sim, será tratado na confirmação do evento, sujeito a condições.</p>
+                        </div>
                     </section>
             </fieldset>
             <fieldset id="fieldTermosCondicoes">
@@ -120,12 +175,15 @@
                 <input type="checkbox" id="termosCondicoes" name="termosCondicoes" required>
                 <label for="termosCondicoes" id="labelTermosCondicoes">Concordo que li e aceito os termos e condições acima.</label>
             </fieldset>
-            <button type="reset">Limpar Dados</button>
-            <button type="submit" onclick="verificaPreenchimentoEventos()">Enviar Solicitação</button>
+            <div id="botoes">
+                <button type="reset">Limpar Dados</button>
+                <button type="submit" onclick="verificaPreenchimentoEventos()">Enviar Solicitação</button>
+            </div>
+            
         </form>
     </article>
     <footer>
-
+        <p>&copy; 2025 Café Pixelado - Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>

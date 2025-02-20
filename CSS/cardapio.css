@@ -1,34 +1,115 @@
-article{
-    background-color: rgb(255, 187, 0);
+@import url('https://fonts.cdnfonts.com/css/arcade-classic');
+ body{
+    background: #f8f8f5;
+ }
+.hero {
+    background-color: #f8f8f5;
+    background-image: url('/Images/fundoCardapio1.jpg');
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    border-radius: 20px;
 }
 
-.sectionCardapio{
-    background-color: rgb(243, 150, 255);
-    padding: 30px;
+.hero-content h2 {
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 60px ;
+    text-shadow: 1px 1px 5px rgb(221, 221, 221);
+}
+
+article{
+    margin: 50px;
+}
+
+section {
+    margin: 70px 100px;
+}
+
+#menu_bebidas{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: #583525;
+    color: white;
+    margin: 20px 100px;
+
+    border-radius: 20px;
+    background: #583525;
+    box-shadow:  11px 11px 33px #cbcbc9,
+             -11px -11px 33px #ffffff;
+}
+
+p a:visited, p a:link{
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    display: flex;
+}
+
+section h2{
+    color: #3a1f13;
+    font-size: 30px;
+    margin: 20;
+}
+
+p {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: bold;
+    color: #3a1f13;
+    margin: 5px;
+}
+
+footer p {
+    color: white;
 }
 
 .caixa-item {
-    background-color: rgb(83, 224, 83);
-    /*Neumorphism.io*/
-    margin: 10px 200px ;
+    background: #ffe5c3;
+    color:rgb(88, 53, 37) ;
+    margin: 15px auto;
     display: flex;
     align-items: center;
     box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow:  11px 11px 33px #cbcbc9,
+             -11px -11px 33px #ffffff;
 }
 
-img {
+.caixa-item h3 {
+    color: rgb(88, 53, 37);
+}
+
+.imagem-item img {
     width: 150px;
     height: 200px;
     margin: 20px;
-    /*arredondadar*/
+    border-radius: 10px;
 }
 
 .descricao-item {
     margin: 20px;
+    text-align: left;
 }
 
-.infoPrecoML{
-    display: inline;
-    margin: 10px 10px;
+.infoPrecoML {
+    display: inline-block;
+    margin: 5px 10px;
+    font-weight: bold;
+    color: #5c4033;
+}
+
+h2, h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(255, 255, 255);
 }
 

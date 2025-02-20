@@ -1,0 +1,113 @@
+@import url('https://fonts.cdnfonts.com/css/arcade-classic');
+
+h2{
+    font-size: 30px;
+    font-family: 'Press Start 2P';
+    text-align: center;
+    margin: 20px 50px 60px;
+    font-weight: bolder;
+}
+
+article{
+    padding: 50px 100px;
+    background-color: #f8f8f5;
+}
+
+form{
+    border-radius: 10px 20px;
+    box-sizing: border-box;
+    padding: 50px 100px;
+
+    border-radius: 50px;
+    background: #f8f8f5;
+    box-shadow:  11px 11px 33px #cbcbc9,
+             -11px -11px 33px #ffffff;
+}
+
+fieldset{
+    margin: 30px;
+    border-radius: 15px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #583525;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+legend, h3{
+    margin: 20px;
+    font-family: 'Montserrat';
+    font-weight: bolder;
+    font-size: 25px;
+
+}
+
+label, .label, li, p {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #3a1f13;
+    margin: 5px;
+}
+
+input  {
+    font-family: 'Montserrat';
+    color: #3a1f13;
+    font-size: 15px;
+}
+.divlabelInput{
+    margin: 25px;
+} 
+.letrinhasMiudas{
+    margin-top: 5px;
+    margin-left: 40px;
+    font-size: 15px;
+    color: #583525;
+}
+.campoJuntinho{
+    margin: 10px;
+}
+
+#labelConvidadoEspecial, #convidadoEspecial, #premioCafe, #labelPremioCafe{
+    color: #815b49;
+}
+
+.botoesRadio{
+    margin-right: 10px;
+}
+
+textarea{
+    display: flex;
+    margin: 0px;    
+}
+
+input[type="radio"]:checked {
+    accent-color: #583525;
+}
+
+input[type="checkbox"]:checked {
+    accent-color: #583525;
+}
+
+#fieldTermosCondicoes{
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#botoes{
+    margin: 0px 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    background-color: #ffe5c3;
+    color: #3a1f13;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #3a1f13;
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}

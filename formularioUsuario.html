@@ -9,23 +9,29 @@
     <meta name="author" content="Nadine Vasconcellos Carvalho de Almeida e Sophia Agnes de Machado Ferreira">
     <title>Café Pixelado</title>
     
-    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="https//fonts.googleapis.com/css?family=Press Start 2P">
+    <link rel="stylesheet" href="https//fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/formulario.css">
     <script src="JavaScript/formularios.js"></script>
 </head>
 <body>
     <article>
-        <h2>Formulário de Feedback</h2>
         <form action="index.html" method="post" onsubmit="verificaPreenchimentoUsuario('feedback')">
-            <section id="usuario">
-                <label for="nome">Nome ou Apelido</label>
+            <h2>Formulário de Feedback</h2>
+            <fieldset>
+                <legend>Fale sobre sua experiencia!</legend>
+                <div class="divlabelInput">
+                    <label for="nome">Nome ou Apelido</label>
                     <input type="text" id="nome" name="nome">
                     <p class="letrinhasMiudas">Se você for tímido pode deixar seu feedback anônimo</p>
-                <label for="contato">Deixe uma forma de contao caso queira uma resposta (WhatsApp, Instagram, Email)</label>
+                </div>
+                <div class="divlabelInput">
+                    <label for="contato">Deixe uma forma de contao caso queira uma resposta (WhatsApp, Instagram, Email)</label>
                     <input type="text" id="contato" name="contato">
-            </section>
-            <section id="experiencia">
-                <label for="infoDivulgacao" id="labelInfoDivulgacao">Como você conheceu o café ?</label>
+                </div>
+                <div class="divlabelInput">
+                    <label for="infoDivulgacao" id="labelInfoDivulgacao">Como você conheceu o café ?</label>
                     <input list="tiposEventos" id="infoDivulgacao" name="infoDivulgacao" required>
                     <datalist id="tiposEventos">
                         <option value="Redes Sociais"></option>
@@ -35,8 +41,9 @@
                         <option value="Achei legal e dei uma chance"></option>
                         <option value="Só entrei para tomar um café..."></option>
                     </datalist>
-                
-                    <p id="labelChamariz">O que te chamou atenção no café ?</p>
+                </div>
+                <div class="divlabelInput">
+                    <p id="labelChamariz" class="label">O que te chamou atenção no café ?</p>
                         <label for="icCardapio">O cardápio delicioso</label>
                             <input type="checkbox" name="infoChamariz" id="icCardapio">
                         <label for="icCardapioTematico">O cardápio temático</label>
@@ -54,15 +61,24 @@
                         <label for="icNada">Nada</label>
                             <input type="checkbox" name="infoChamariz" id="icNada" onclick="botoesCondicionais(this)">
                         <label for="icOutro">Outro</label>
-                            <input type="checkbox" name="infoChamariz" id="icOutro" onclick="botoesCondicionais(this)">                  
-                        
-                        <label for="outroAtrativo" id="labelOutroAtrativo">Que outra coisa te chamou atenção no café?</label>
-                            <input type="text" id="outroAtrativo" name="outroAtrativo" disabled>
-                        <label for="nenhumAtrativo" id="labelNadaAtrativo">Por que nada te chamou atenção no café?</label>
-                            <input type="text" id="nenhumAtrativo" name="nenhumAtrativo" disabled>
-
+                            <input type="checkbox" name="infoChamariz" id="icOutro" onclick="botoesCondicionais(this)">
+                </div>
+                <div class="divlabelInput">
+                    <label for="outroAtrativo" id="labelOutroAtrativo">Que outra coisa te chamou atenção no café?</label>
+                    <input type="text" id="outroAtrativo" name="outroAtrativo" disabled>
+                </div>
+                <div class="divlabelInput">
+                    <label for="nenhumAtrativo" id="labelNadaAtrativo">Por que nada te chamou atenção no café?</label>
+                    <input type="text" id="nenhumAtrativo" name="nenhumAtrativo" disabled>
+                </div>
+                <div class="divlabelInput">
                     <label for="experiencia" id="labelExperiencia">Como foi sua experiência no nosso café?</label>
-                        <textarea name="experiencia" id="experiencia" cols="50" rows="10"></textarea>
+                    <textarea name="experiencia" id="experiencia" cols="50" rows="10"></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Compartilhe conosco</legend>
+                <div class="divlabelInput">
                     <p>Compartilhe suas fotos conosco!</p>
                         <img src="Images/iconeInstagram.jpg" alt="iconeCafeAvaliacao">
                             <p class="redeSocial">Instagram</p>
@@ -70,6 +86,8 @@
                             <p class="redeSocial">WhatsApp</p>
                         <img src="Images/iconeTwiter.jpg" alt="iconeCafeAvaliacao">
                             <p class="redeSocial">Twiter</p>
+                </div>
+                <div class="divlabelInput">
                     <div id="avaliação">
                         <p>Que nota nos daria? </p>
                         <img src="Images/iconeCafePretoXicara.png" alt="Icone de café clicável para avaliacção 01">
@@ -78,13 +96,17 @@
                         <img src="Images/iconeCafePretoXicara.png" alt="Icone de café clicável para avaliacção 04">      
                         <img src="Images/iconeCafeDourado.png" alt="Icone de café clicável para avaliacção 05">
                     </div>
+                </div>
+                <div class="divlabelInput">
                     <p>Podemos divulgar sua opinião em nossas redes sociais ?</p>
                         <input type="radio" id="naoPublicar" name="PublicarTematico" value="Não" checked><label for="naoPublicar">Não</label>
                         <input type="radio" id="simPublicar" name="PublicarTematico" value="Sim"><label for="simPublicar">Sim</label>
-            </section>
-
-            <button type="reset">Limpar</button>
-            <button type="submit" onclick="verificaPreenchimentoUsuario()">Enviar Feedback</button>
+                </div>
+            </fieldset>
+            <div id="botoes">
+                <button type="reset">Limpar</button>
+                <button type="submit" onclick="verificaPreenchimentoUsuario()">Enviar Feedback</button>
+            </div>
         </form>
     </article>
     <footer>
