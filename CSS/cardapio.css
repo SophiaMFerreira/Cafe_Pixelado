@@ -4,7 +4,7 @@
  }
 .hero {
     background-color: #f8f8f5;
-    background-image: url('/Images/fundoCardapio1.jpg');
+    background-image: url('../Images/fundoCardapio1.jpg');
     background-size: cover;
     height: 50vh;
     display: flex;
