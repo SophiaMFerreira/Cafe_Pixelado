@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/arcade-classic');
 
 body {
-    background-image: url('/Images/arcadeeee.jpg');
+    background-image: url('../Images/arcadeeee.jpg');
     background-size: cover;
     color: #ffe5c3;
     margin: 0;
@@ -70,7 +70,7 @@ p {
 }
 
 footer {
-    background-image: url('/Images/gramaFooter.jpg');
+    background-image: url('../Images/gramaFooter.jpg');
     background-size: cover;
     font-family: 'Press Start 2P';
     font-size: 9px;
