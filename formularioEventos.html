@@ -11,24 +11,26 @@
     
     <link rel="stylesheet" href="CSS/base.css">
     <link rel="stylesheet" href="CSS/formulario.css">
+    <script src="JavaScript/formularios.js"></script>
 </head>
 <body>
     <article>
         <h2>Formulário para Proposição de Evento</h2>
-        <form action="" method="post">
+        <form action="index.html" method="post" onsubmit="enviarFormulario('eventos')">
+            <input type="hidden" value="">
             <fieldset id="fieldContratante">
                 <legend>Informações do Solicitante</legend>
-                    <label for="nome">Nome do solicitante</label>
+                    <label for="nome" id="labelNome">Nome do solicitante</label>
                         <input type="text" id="nome" name="nome" required>
                         <p class="letrinhasMiudas">Em caso de pessoa física, inserir o nome completo.</p>
-                    <label for="email">E-mail para contato</label>
-                        <input type="email" id="email" name="email" required>
-                    <label for="telefone">Telefone para contato</label>
+                    <label for="email" id="labelEmail">E-mail para contato</label>
+                        <input type="email" id="email" name="email"required >
+                    <label for="telefone" id="labelTelefone">Telefone para contato</label>
                         <input type="tel" id="telefone" name="telefone" placeholder="(00) 0000-0000">
                     <p>Redes sociais</p>
-                        <label for="instagram">Instagram</label>
-                            <input type="text" id="instagram" name="instagram">
-                        <label for="twiter">Twiter</label>
+                        <label for="instagram" id="labelInstagram">Instagram</label>
+                            <input type="text" id="instagram" name="instagram" >
+                        <label for="twiter" id="labelTwiter">Twiter</label>
                             <input type="text" id="twiter" name="twiter">
                         <label for="outro">Outro</label>
                             <input type="text" id="outro" name="outro">
@@ -37,7 +39,7 @@
                 <legend>Informações do Evento</legend>
                     <section id="temaEvento">
                         <h3>Sobre o Evento</h3>
-                        <label for="tipoEvento">Tipo de evento</label>
+                        <label for="tipoEvento" id="labelTiposEvento">Tipo de evento</label>
                             <input list="tiposEventos" id="tipoEvento" name="tipoEvento" required>
                         <datalist id="tiposEventos">
                             <option value="Concurso ou Competição"></option>
@@ -50,7 +52,7 @@
                         </datalist>
                         <label for="tema">Tema do evento</label>
                             <input type="text" id="tema" name="tema">
-                        <label for="descricao">Descrição breve do evento</label>
+                        <label for="descricao" id="labelDescricaoEvento">Descrição breve do evento</label>
                             <textarea name="descricao" id="descricao" cols="50" rows="10"></textarea>
                         <p>Deseja incluir cardápio temático ?</p>
                             <input type="radio" id="naoCardapio" name="cardapioTematico" value="Não" checked><label for="naoCardapio">Não</label>
@@ -60,9 +62,9 @@
                         <h3>Sobre a Organização</h3>
                         <label for="publicoAlvo">Público-alvo</label>
                             <input type="text" id="publicoAlvo" name="publicoAlvo">
-                        <label for="numParticipantes">Número estimado de participantes:</label>
+                        <label for="numParticipantes" id="labelNumParticipantes">Número estimado de participantes:</label>
                             <input type="number" id="numParticipantes" name="numParticipantes" min="0" required>
-                        <label for="datas">Disponibilidade de Datas:</label>
+                        <label for="datas" id="labelDatas">Disponibilidade de Datas:</label>
                             <textarea name="datas" id="datas" cols="50" rows="10"></textarea>
                     </section>
                     <section id="parceriaEvento">
@@ -71,16 +73,16 @@
                             <input type="radio" id="simApoioCafe" name="apoioCafe" value="Sim"><label for="simApoioCafe">Sim</label>
                             <input type="radio" id="naoApoioCafe" name="apoioCafe" value="Não" checked><label for="naoApoioCafe">Não</label>
                         <p>Pretende trazer convidados/especialista ?</p>
-                            <label for="naoConvidados">Não</label><input type="radio" id="naoConvidados" name="convidados" value="Não" checked>
-                            <label for="simConvidados">Sim</label><input type="radio" id="simConvidados" name="convidados" value="Sim">
-                            <input type="checkbox" id="convidadoEspecial" name="convidadoEspecial">
-                            <label for="convidadoEspecial">O convidado possui restrições.</label>
+                            <input type="radio" id="naoConvidados" name="convidados" value="Não" checked  onclick="botoesCondicionais(this)"><label for="naoConvidados">Não</label>
+                            <input type="radio" id="simConvidados" name="convidados" value="Sim"  onclick="botoesCondicionais(this)"><label for="simConvidados" >Sim</label>
+                            <input type="checkbox" id="convidadoEspecial" name="convidadoEspecial" disabled>
+                            <label for="convidadoEspecial" id="labelConvidadoEspecial">O convidado possui restrições.</label>
                             <p class="letrinhasMiudas">Se sim, será tratado na confirmação do evento.</p>
                         <p>O evento contempla premiação ou brinde ?</p>
-                            <label for="naoPremiacao">Não</label><input type="radio" id="naoPremiacao" name="premiacao" value="Não" checked>
-                            <label for="simPremiacao">Sim</label><input type="radio" id="simPremiacao" name="premiacao" value="Sim">
-                            <input type="checkbox" id="premioCafe" name="premioCafe">
-                            <label for="premioCafe">Premiação ou brinde relativo ao café</label>
+                            <input type="radio" id="naoPremiacao" name="premiacao" value="Não" checked onclick="botoesCondicionais(this)"><label for="naoPremiacao">Não</label>
+                            <input type="radio" id="simPremiacao" name="premiacao" value="Sim" onclick="botoesCondicionais(this)"><label for="simPremiacao">Sim</label>
+                            <input type="checkbox" id="premioCafe" name="premioCafe" disabled>
+                            <label for="premioCafe" id="labelPremioCafe">Premiação ou brinde relativo ao café</label>
                             <p class="letrinhasMiudas">Se sim, será tratado na confirmação do evento, sujeito a condições.</p>
                     </section>
             </fieldset>
@@ -116,11 +118,10 @@
                         <li>Em eventos com competições ou sorteios, as decisões dos organizadores serão finais e inapeláveis.</li>
                     </ol>
                 <input type="checkbox" id="termosCondicoes" name="termosCondicoes" required>
-                <label for="termosCondicoes">Concordo que li e aceito os termos e condições acima.</label>
+                <label for="termosCondicoes" id="labelTermosCondicoes">Concordo que li e aceito os termos e condições acima.</label>
             </fieldset>
             <button type="reset">Limpar Dados</button>
-            <button type="submit">Enviar Solicitação</button>
-            <!--Agradecemos sua participação e esperamos que aproveite nossos eventos! 💙-->
+            <button type="submit" onclick="verificaPreenchimentoEventos()">Enviar Solicitação</button>
         </form>
     </article>
     <footer>

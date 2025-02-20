@@ -1,0 +1,132 @@
+@import url('https://fonts.cdnfonts.com/css/arcade-classic');
+
+body {
+    background-image: url('imagens/arcadeeee.jpg');
+    background-size: cover;
+    color: #ffe5c3;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    text-align: center;
+    text-justify: auto;
+}
+
+
+header {
+    font-family: 'Press Start 2P';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: rgb(88, 53, 37);
+    font-size: 13px;
+    background: #ffe5c3;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 85px;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: rgb(88, 53, 37);
+    font-family: 'Montserrat';
+    font-size: 16px;
+    text-decoration: underline;
+    padding-left: 18px;
+}
+
+nav ul li a:hover {
+  color: rgb(209, 108, 150);
+}
+
+#nossaHistoria {
+    font-family: 'Press Start 2P';
+    color: white;
+}
+
+#eventosEspeciais {
+    font-family: 'Press Start 2P';
+    color: white;
+    margin-bottom: 2px;
+}
+
+.caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.texto, .texto-extra {
+    max-width: 800px;
+    padding: 12px;
+    background: rgba(88, 53, 37, 0.884);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ffffffc4;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+
+.imagem img {
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.imagem2 img {
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+footer {
+    background-image: url('imagens/gramaFooter.jpg');
+    background-size: cover;
+    font-family: 'Press Start 2P';
+    font-size: 9px;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    padding-bottom: 10px;  
+}
+
+#footerP {
+    font-family: 'Press Start 2P';
+    font-size: 10px;
+    color: white;
+
+}
