@@ -15,50 +15,6 @@ p {
     text-justify: auto;
 }
 
-
-header {
-    font-family: 'Press Start 2P';
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    color: rgb(88, 53, 37);
-    font-size: 13px;
-    background: #ffe5c3;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 85px;
-    margin-right: 20px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: rgb(88, 53, 37);
-    font-family: 'Montserrat';
-    font-size: 16px;
-    text-decoration: underline;
-    padding-left: 18px;
-}
-
-nav ul li a:hover {
-  color: rgb(209, 108, 150);
-}
-
 #nossaHistoria {
     font-family: 'Press Start 2P';
     color: white;
